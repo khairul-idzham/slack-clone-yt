@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Avatar from '@mui/material/Avatar';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import SearchIcon from '@mui/icons-material/Search';
@@ -81,7 +82,12 @@ const HeaderSearch = styled.div`
 `;
 
 const HeaderRight = styled.div`
-    flex; 0.3;
+    flex: 0.3;
     display: flex;
-    margin-right: 20px;
+    align-items: flex-end;
+
+    > .MuiSvgIcon-root {
+        margin-left: auto;
+        margin-right: 20px;
+    }
 `;
