@@ -12,9 +12,8 @@ function App() {
       <Router>
         <>
           <Header />
-          <Sidebar />
-
           <AppBody>
+          <Sidebar />
             <Switch>
               <Route path="/" exact>
               </Route>
@@ -28,4 +27,7 @@ function App() {
 
 export default App;
 
-const AppBody = styled.div``;
+const AppBody = styled.div`
+  display: flex;
+  height: 100vh;
+`;
