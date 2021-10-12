@@ -29,6 +29,14 @@ const SidebarOptionContainer = styled.div`
         opacity: 0.9;
         background-color: #340e36;
     }
+
+    > h3 {
+        font-weight: 500;
+    }
+
+    > h3 > span {
+        padding: 15px;
+    }
 `;
 
 const SidebarOptionChannel = styled.div`
