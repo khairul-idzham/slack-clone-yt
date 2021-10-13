@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { db } from '../firebase';
+import { collection, addDoc } from "firebase/firestore";
+
 
 function SidebarOption({ Icon, title, addChannelOption }) {
-    const addChannel = () => {
+    const addChannel = async (e) => {
+        e.preventDefault()
+
         const channelName = prompt("Please enter the channel name.");
 
         if (channelName) {
-            db.collection("rooms").add({
-                name: channelName,
-            });
+            await addDoc(collection(db, "rooms"), {
+                  name: channelName,
+                  createdAt: new Date(),
+                });
         }
     };
 
